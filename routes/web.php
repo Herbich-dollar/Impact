@@ -22,10 +22,6 @@ Route::get('/', function () {
 Route::get('/projects', [ProjectController::class, 'index'])
     ->name('projects');
 
-// Détail d'un projet (accessible à tous)
-Route::get('/projects/{project}', [ProjectController::class, 'show'])
-    ->name('projects.show');
-
 // Pages statiques
 Route::get('/about', function () {
     return view('about');
@@ -61,21 +57,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // Gestion des projets (accessible à tous les utilisateurs connectés)
+    // IMPORTANT : Routes avec noms spécifiques AVANT les routes avec paramètres dynamiques
+    
+    // Créer un projet
     Route::get('/projects/create', [ProjectController::class, 'create'])
         ->name('projects.create');
 
     Route::post('/projects', [ProjectController::class, 'store'])
         ->name('projects.store');
-
-    Route::get('/projects/{project}/edit', [ProjectController::class, 'edit'])
-        ->name('projects.edit');
-
-    Route::put('/projects/{project}', [ProjectController::class, 'update'])
-        ->name('projects.update');
-
-    Route::delete('/projects/{project}', [ProjectController::class, 'destroy'])
-        ->name('projects.destroy');
 
     // Investissement dans les projets
     Route::get('/projects/{project}/invest', [DonationController::class, 'create'])
@@ -83,6 +72,17 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/projects/{project}/invest', [DonationController::class, 'store'])
         ->name('projects.invest.store');
+
+    // Modifier un projet
+    Route::get('/projects/{project}/edit', [ProjectController::class, 'edit'])
+        ->name('projects.edit');
+
+    Route::put('/projects/{project}', [ProjectController::class, 'update'])
+        ->name('projects.update');
+
+    // Supprimer un projet
+    Route::delete('/projects/{project}', [ProjectController::class, 'destroy'])
+        ->name('projects.destroy');
 
     // Paiement Stripe
     Route::post('/projects/{project}/pay', [StripePaymentController::class, 'checkout'])
@@ -108,6 +108,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
         ->name('projects.admin');
 
 });
+
+// Détail d'un projet - DOIT être en dernier pour /projects/*
+Route::get('/projects/{project}', [ProjectController::class, 'show'])
+    ->name('projects.show');
 
 // Webhook Stripe (sans authentification)
 Route::post('/stripe/webhook', [StripeWebhookController::class, 'handle']);
