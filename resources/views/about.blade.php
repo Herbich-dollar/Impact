@@ -48,15 +48,15 @@
             <div class="grid grid-cols-3 gap-8 max-w-3xl mx-auto transition-all duration-700 delay-300"
                  :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'">
                 <div class="text-center group cursor-pointer">
-                    <div class="text-4xl font-black text-emerald-400 group-hover:scale-110 transition-transform duration-300">2020</div>
+                    <div class="text-4xl font-black text-emerald-400 group-hover:scale-110 transition-transform duration-300">2026</div>
                     <div class="text-sm text-gray-400 mt-2">Année de création</div>
                 </div>
                 <div class="text-center group cursor-pointer">
-                    <div class="text-4xl font-black text-teal-400 group-hover:scale-110 transition-transform duration-300">250+</div>
+                    <div class="text-4xl font-black text-teal-400 group-hover:scale-110 transition-transform duration-300">0</div>
                     <div class="text-sm text-gray-400 mt-2">Projets financés</div>
                 </div>
                 <div class="text-center group cursor-pointer">
-                    <div class="text-4xl font-black text-cyan-400 group-hover:scale-110 transition-transform duration-300">15MFCFA</div>
+                    <div class="text-4xl font-black text-cyan-400 group-hover:scale-110 transition-transform duration-300">0FCFA</div>
                     <div class="text-sm text-gray-400 mt-2">Capital déployé</div>
                 </div>
             </div>

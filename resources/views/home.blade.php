@@ -55,7 +55,7 @@
                 <!-- Description -->
                 <p class="text-xl md:text-2xl text-gray-300 leading-relaxed transition-all duration-700 delay-200"
                    :class="show ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'">
-                    Rejoignez une communauté d'investisseurs visionnaires qui financent des projets à fort impact social et environnemental, tout en générant des rendements attractifs.
+                    Rejoignez une communauté d'investisseurs visionnaires qui financent des projets à fort impact social et environnemental.
                 </p>
 
                 <!-- Key Features -->
@@ -112,7 +112,7 @@
                      :class="show ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'">
                     
                     <div class="text-sm">
-                        <div class="text-white font-semibold">+5,200 investisseurs</div>
+                        <div class="text-white font-semibold">0 investisseurs</div>
                         <div class="text-gray-400">nous font confiance</div>
                     </div>
                 </div>
@@ -178,27 +178,27 @@
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div class="text-center group cursor-pointer">
                 <div class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-600 mb-2 
-                            group-hover:scale-110 transition-transform duration-300">250+</div>
+                            group-hover:scale-110 transition-transform duration-300">0</div>
                 <div class="text-gray-600 font-medium">Projets financés</div>
-                <div class="text-sm text-gray-400 mt-1">Depuis 2020</div>
+                <div class="text-sm text-gray-400 mt-1"></div>
             </div>
             <div class="text-center group cursor-pointer">
                 <div class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-cyan-600 mb-2
-                            group-hover:scale-110 transition-transform duration-300">15MFCFA</div>
+                            group-hover:scale-110 transition-transform duration-300">0MFCFA</div>
                 <div class="text-gray-600 font-medium">Investis au total</div>
                 <div class="text-sm text-gray-400 mt-1">Capital déployé</div>
             </div>
             <div class="text-center group cursor-pointer">
                 <div class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-emerald-600 mb-2
-                            group-hover:scale-110 transition-transform duration-300">5.2K</div>
+                            group-hover:scale-110 transition-transform duration-300">0K</div>
                 <div class="text-gray-600 font-medium">Investisseurs actifs</div>
                 <div class="text-sm text-gray-400 mt-1">Communauté engagée</div>
             </div>
             <div class="text-center group cursor-pointer">
                 <div class="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-cyan-600 mb-2
-                            group-hover:scale-110 transition-transform duration-300">98%</div>
+                            group-hover:scale-110 transition-transform duration-300">0%</div>
                 <div class="text-gray-600 font-medium">Taux de satisfaction</div>
-                <div class="text-sm text-gray-400 mt-1">Note moyenne 4.9/5</div>
+                <div class="text-sm text-gray-400 mt-1">Note moyenne 0/5</div>
             </div>
         </div>
     </div>
@@ -373,7 +373,7 @@
                     <h3 class="text-2xl font-black mb-2">Énergie Renouvelable</h3>
                     <p class="text-white/80 text-sm mb-4">Projets solaires, éoliens et hydroélectriques</p>
                     <div class="flex items-center gap-2 text-sm font-semibold">
-                        <span>68 projets actifs</span>
+                        <span>0 projet actif</span>
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -396,7 +396,7 @@
                     <h3 class="text-2xl font-black mb-2">Agriculture Durable</h3>
                     <p class="text-white/80 text-sm mb-4">Agroécologie et circuits courts</p>
                     <div class="flex items-center gap-2 text-sm font-semibold">
-                        <span>42 projets actifs</span>
+                        <span>0 projet actif</span>
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -419,7 +419,7 @@
                     <h3 class="text-2xl font-black mb-2">Économie Circulaire</h3>
                     <p class="text-white/80 text-sm mb-4">Recyclage et valorisation des déchets</p>
                     <div class="flex items-center gap-2 text-sm font-semibold">
-                        <span>35 projets actifs</span>
+                        <span>0 projet actif</span>
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -442,7 +442,7 @@
                     <h3 class="text-2xl font-black mb-2">Mobilité Verte</h3>
                     <p class="text-white/80 text-sm mb-4">Transport électrique et solutions durables</p>
                     <div class="flex items-center gap-2 text-sm font-semibold">
-                        <span>28 projets actifs</span>
+                        <span>0 projet actif</span>
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -465,7 +465,7 @@
                     <h3 class="text-2xl font-black mb-2">Inclusion Sociale</h3>
                     <p class="text-white/80 text-sm mb-4">Emploi, éducation et solidarité</p>
                     <div class="flex items-center gap-2 text-sm font-semibold">
-                        <span>51 projets actifs</span>
+                        <span>0 projet actif</span>
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -488,7 +488,7 @@
                     <h3 class="text-2xl font-black mb-2">Innovation Tech</h3>
                     <p class="text-white/80 text-sm mb-4">Technologies vertes et numériques</p>
                     <div class="flex items-center gap-2 text-sm font-semibold">
-                        <span>39 projets actifs</span>
+                        <span>0 projet actif</span>
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
@@ -536,9 +536,9 @@
                     "Une plateforme exceptionnelle qui allie performance financière et impact réel. J'ai investi dans 5 projets et je suis ravi de pouvoir suivre leur évolution et leur impact environnemental."
                 </p>
                 <div class="flex items-center gap-4">
-                    <img src="/api/placeholder/50/50" alt="Sophie Martin" class="w-12 h-12 rounded-full">
+                    <img src="/api/placeholder/50/50" alt="PAKO Sophie" class="w-12 h-12 rounded-full">
                     <div>
-                        <div class="font-bold text-gray-900">Sophie Martin</div>
+                        <div class="font-bold text-gray-900">PAKO Sophie</div>
                         <div class="text-sm text-gray-500">Investisseuse depuis 2022</div>
                     </div>
                 </div>
@@ -567,9 +567,9 @@
                     "Enfin une solution d'investissement qui a du sens ! La transparence sur l'impact des projets et la qualité du suivi sont exemplaires. Mon portefeuille performe très bien."
                 </p>
                 <div class="flex items-center gap-4">
-                    <img src="/api/placeholder/50/50" alt="Thomas Dubois" class="w-12 h-12 rounded-full">
+                    <img src="/api/placeholder/50/50" alt="DJATO Thomas" class="w-12 h-12 rounded-full">
                     <div>
-                        <div class="font-bold text-gray-900">Thomas Dubois</div>
+                        <div class="font-bold text-gray-900">DJATO Thomas</div>
                         <div class="text-sm text-gray-500">Entrepreneur · Investisseur</div>
                     </div>
                 </div>
@@ -599,9 +599,9 @@
                     "J'apprécie particulièrement la rigueur dans la sélection des projets et les outils d'analyse fournis. C'est rassurant de savoir que chaque FCFA investi contribue à un monde meilleur."
                 </p>
                 <div class="flex items-center gap-4">
-                    <img src="/api/placeholder/50/50" alt="Marie Lefebvre" class="w-12 h-12 rounded-full">
+                    <img src="/api/placeholder/50/50" alt="ABALO Gloria" class="w-12 h-12 rounded-full">
                     <div>
-                        <div class="font-bold text-gray-900">Marie Lefebvre</div>
+                        <div class="font-bold text-gray-900">ABALO Gloria</div>
                         <div class="text-sm text-gray-500">Directrice RSE · Investisseuse</div>
                     </div>
                 </div>

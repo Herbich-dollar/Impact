@@ -84,7 +84,7 @@
             </div>
             <div class="text-center group cursor-pointer">
                 <div class="text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-cyan-600 mb-2
-                            group-hover:scale-110 transition-transform duration-300">5.2K</div>
+                            group-hover:scale-110 transition-transform duration-300">0K</div>
                 <div class="text-gray-600 font-medium">Investisseurs</div>
             </div>
         </div>
