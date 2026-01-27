@@ -189,7 +189,7 @@
                     <span class="text-white font-bold text-xl">II</span>
                 </div>
                 <h1 class="text-2xl font-bold bg-gradient-to-r from-[var(--mint-green)] to-[var(--mint-light)] bg-clip-text text-transparent">
-                    Impact Invest
+                    Impact+Invest
                 </h1>
             </a>
         </div>
@@ -218,8 +218,8 @@
             @endauth
 
             @guest
-                <li><a href="{{ route('login') }}" class="auth-btn auth-btn-secondary">Connexion</a></li>
-                <li><a href="{{ route('register') }}" class="auth-btn auth-btn-primary">Inscription</a></li>
+                <!-- <li><a href="{{ route('login') }}" class="auth-btn auth-btn-secondary">Connexion</a></li>
+                <li><a href="{{ route('register') }}" class="auth-btn auth-btn-primary">Inscription</a></li> -->
             @endguest
         </ul>
     </div>
