@@ -1,149 +1,201 @@
-<x-guest-layout>
-    <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100 dark:from-gray-900 dark:via-purple-900 dark:to-indigo-900 py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-md w-full space-y-8">
-            <!-- Header -->
-            <div class="text-center">
-                <div class="mx-auto h-16 w-16 bg-indigo-600 rounded-full flex items-center justify-center shadow-lg">
-                    <svg class="h-10 w-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
-                    </svg>
-                </div>
-                <h2 class="mt-6 text-3xl font-extrabold text-gray-900 dark:text-white">
-                    {{ __('Create your account') }}
-                </h2>
-                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                    {{ __('Join us today') }}
-                </p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e0e7ff, #f5d0fe, #ffe4e6);
+        }
+
+        .register-box {
+            width: 100%;
+            max-width: 420px;
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 14px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1rem;
+            background: #4f46e5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #111827;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-top: 0.3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.7rem 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 0.95rem;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+        }
+
+        button {
+            width: 100%;
+            margin-top: 1.5rem;
+            padding: 0.8rem;
+            background: #4f46e5;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.15s ease, background 0.15s ease;
+        }
+
+        button:hover {
+            background: #4338ca;
+            transform: scale(1.02);
+        }
+
+        .divider {
+            position: relative;
+            margin: 2rem 0 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: #e5e7eb;
+            z-index: 0;
+        }
+
+        .divider span {
+            position: relative;
+            background: #fff;
+            padding: 0 0.6rem;
+            z-index: 1;
+        }
+
+        .login-link {
+            text-align: center;
+        }
+
+        .login-link a {
+            font-size: 0.9rem;
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-box">
+        <div class="header">
+            <div class="logo">+</div>
+            <h1>Créer un compte</h1>
+            <p class="subtitle">Rejoignez-nous dès aujourd'hui</p>
+        </div>
+
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
             </div>
 
-            <!-- Card -->
-            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 space-y-6">
-                <form method="POST" action="{{ route('register') }}" class="space-y-6">
-                    @csrf
-
-                    <!-- Name -->
-                    <div>
-                        <x-input-label for="name" :value="__('Name')" class="text-gray-700 dark:text-gray-300 font-semibold" />
-                        <div class="mt-2 relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                                </svg>
-                            </div>
-                            <x-text-input 
-                                id="name" 
-                                class="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition duration-200" 
-                                type="text" 
-                                name="name" 
-                                :value="old('name')" 
-                                required 
-                                autofocus 
-                                autocomplete="name"
-                                placeholder="John Doe"
-                            />
-                        </div>
-                        <x-input-error :messages="$errors->get('name')" class="mt-2" />
-                    </div>
-
-                    <!-- Email Address -->
-                    <div>
-                        <x-input-label for="email" :value="__('Email')" class="text-gray-700 dark:text-gray-300 font-semibold" />
-                        <div class="mt-2 relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"/>
-                                </svg>
-                            </div>
-                            <x-text-input 
-                                id="email" 
-                                class="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition duration-200" 
-                                type="email" 
-                                name="email" 
-                                :value="old('email')" 
-                                required 
-                                autocomplete="username"
-                                placeholder="vous@exemple.com"
-                            />
-                        </div>
-                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                    </div>
-
-                    <!-- Password -->
-                    <div>
-                        <x-input-label for="password" :value="__('Password')" class="text-gray-700 dark:text-gray-300 font-semibold" />
-                        <div class="mt-2 relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-                                </svg>
-                            </div>
-                            <x-text-input 
-                                id="password" 
-                                class="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition duration-200"
-                                type="password"
-                                name="password"
-                                required 
-                                autocomplete="new-password"
-                                placeholder="••••••••"
-                            />
-                        </div>
-                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                    </div>
-
-                    <!-- Confirm Password -->
-                    <div>
-                        <x-input-label for="password_confirmation" :value="__('Confirm Password')" class="text-gray-700 dark:text-gray-300 font-semibold" />
-                        <div class="mt-2 relative">
-                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                                </svg>
-                            </div>
-                            <x-text-input 
-                                id="password_confirmation" 
-                                class="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition duration-200"
-                                type="password"
-                                name="password_confirmation" 
-                                required 
-                                autocomplete="new-password"
-                                placeholder="••••••••"
-                            />
-                        </div>
-                        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div>
-                        <x-primary-button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800 transition duration-200 transform hover:scale-[1.02] active:scale-[0.98]">
-                            {{ __('Register') }}
-                        </x-primary-button>
-                    </div>
-
-                    <!-- Divider -->
-                    <div class="relative">
-                        <div class="absolute inset-0 flex items-center">
-                            <div class="w-full border-t border-gray-300 dark:border-gray-600"></div>
-                        </div>
-                        <div class="relative flex justify-center text-sm">
-                            <span class="px-2 bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400">
-                                {{ __("Already have an account?") }}
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Login Link -->
-                    <div class="text-center">
-                        <a href="{{ route('login') }}" class="font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300 transition duration-200">
-                            {{ __('Sign in to your account') }}
-                        </a>
-                    </div>
-                </form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="vous@exemple.com" required />
             </div>
 
-            <!-- Footer -->
-            <p class="text-center text-xs text-gray-500 dark:text-gray-400">
-                © {{ date('Y') }} {{ config('app.name') }}. {{ __('All rights reserved.') }}
-            </p>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required />
+            </div>
+
+            <div class="form-group">
+                <label for="password_confirmation">Confirmer le mot de passe</label>
+                <input type="password" id="password_confirmation" name="password_confirmation" placeholder="••••••••" required />
+            </div>
+
+            <button type="submit">S'inscrire</button>
+        </form>
+
+        <div class="divider">
+            <span>Déjà un compte ?</span>
+        </div>
+
+        <div class="login-link">
+            <a href="#">Se connecter</a>
+        </div>
+
+        <div class="footer">
+            © 2026 — Tous droits réservés
         </div>
     </div>
-</x-guest-layout>
+</body>
+</html>
